@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sequential Chaos</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script> <!-- vue.js -->
+  <script src="https://d3js.org/d3.v5.min.js"></script> <!-- d3.js -->
 </head>
 <body>
-  <h1>Welcome!</h1>
+  <div id="app">
+    <h1> {{ site_name }} </h1>
+    <a v-bind:href="blog">Blog</a> 
+  </div>
+  <script src="main.js"></script>
+  <script src="color.js"></script>
 </body>
 </html>
