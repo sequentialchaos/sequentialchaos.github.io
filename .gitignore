@@ -1,7 +1,1 @@
-*
-!.gitignore
-!*.html
-!*.js
-!*.css
-!/sketches
-!/lib
+blog/
