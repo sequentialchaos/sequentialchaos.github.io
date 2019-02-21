@@ -5,17 +5,17 @@
     by Donald Knuth,
     pages 416 & 417.
 
-   - Generates all set partitions of {0, 1, ..., N-1}
+   - Generates all set partitions of {1, 2,..., N}
      lexicographic order.
 */
 function* setPartitions(N) {
   // H1
   let a = [];   // Restricted growth string, a.
   let b = [];   // Auxiliary array, b.
-  let set = []; // The set {0, 1, ..., N-1}.
+  let set = []; // The set {1, 2,..., N}.
   for (let n = 0; n < N; n++) {
     a.push(0);
-    set.push(n);
+    set.push(n + 1);
     if (n < N - 1)
       b.push(1);
   }
