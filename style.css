@@ -1,0 +1,13 @@
+html, body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#canvas-container, #main-container {
+  position: absolute;
+}
+
+#my-box {
+  font-size: 60px;
+  background: white;
+}
