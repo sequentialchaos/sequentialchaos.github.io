@@ -28,26 +28,11 @@ function draw() {
   background(background_color)
   stroke(background_color)
   hex_grid.draw()
-  if (frameCount % 5 == 0) {
-    for (let i = 0; i < 1; i++) {
+  if (frameCount % 2 == 0) {
+    for (let i = 0; i < 2; i++) {
       random_hex_index = int(Math.random() * hex_grid.hexes.length)
       random_hex = hex_grid.hexes[random_hex_index]
-  
-      random_hex_color = random_hex.fill_color
-      random_hex_hue = hue(random_hex_color)
-      random_hex_saturation = saturation(random_hex_color)      
-      random_hex_brightness = brightness(random_hex_color)
-  
-      new_hue = Math.random() < 0.5 ? random_hex_hue : (random_hex_hue + 20) % 700 
-      new_saturation = random_hex_saturation
-      new_brightness = Math.random() < 0.5 ? (random_hex_brightness + 100) % 1000 + 600 : random(600, 800)
-      new_color = color(
-        new_hue,
-        new_saturation,
-        new_brightness
-      )
-  
-      random_hex.fill_color = new_color
+      random_hex.fill_color = random_hex.generateRandomColor2()
     }
   }
 }
@@ -123,7 +108,19 @@ class Hex {
     let random_color = color(
       int(Math.random() * 300) + 400,
       int(Math.random() * 200) + (400 - 200 + 1),
-      int(Math.random() * 50) + (750 - 50 + 1) 
+      int(Math.random() * 300) + (850 - 300 + 1) 
+    )
+    pop()
+    return random_color
+  }
+
+  generateRandomColor2() {
+    push()
+    colorMode(HSB, 1000, 1000, 1000)
+    let random_color = color(
+      int(Math.random() * 500) + 300,
+      int(Math.random() * 300) + (600 - 300 + 1),
+      int(Math.random() * 300) + (1000 - 300 + 1) 
     )
     pop()
     return random_color
