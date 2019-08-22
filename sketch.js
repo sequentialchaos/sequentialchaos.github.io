@@ -3,8 +3,8 @@ function setup() {
   looping = true
 
   createCanvas(innerWidth, innerHeight, P2D).parent('canvas-container')
-
   background_color = color(20)
+  colorMode(HSB, 1000)
 
   hex_grid = new HexGrid({
     w: width, 
@@ -12,16 +12,6 @@ function setup() {
     num_columns: 12,
     stroke_color: background_color
   })
-
-
-  colorMode(HSB, 1000)
-
-
-  // for (let i = 0; i < hex_grid.hexes.length; i++) {
-  //   let hex = hex_grid.hexes[i]
-  //   hex.fill_color = color(0, 0, 0)
-  // }
-
 }
 
 function draw() {
@@ -32,7 +22,7 @@ function draw() {
     for (let i = 0; i < 2; i++) {
       random_hex_index = int(Math.random() * hex_grid.hexes.length)
       random_hex = hex_grid.hexes[random_hex_index]
-      random_hex.fill_color = random_hex.generateRandomColor2()
+      random_hex.fill_color = random_hex.generateRandomColor()
     }
   }
 }
@@ -109,18 +99,6 @@ class Hex {
       int(Math.random() * 300) + 400,
       int(Math.random() * 200) + (400 - 200 + 1),
       int(Math.random() * 300) + (850 - 300 + 1) 
-    )
-    pop()
-    return random_color
-  }
-
-  generateRandomColor2() {
-    push()
-    colorMode(HSB, 1000, 1000, 1000)
-    let random_color = color(
-      int(Math.random() * 500) + 300,
-      int(Math.random() * 300) + (600 - 300 + 1),
-      int(Math.random() * 300) + (1000 - 300 + 1) 
     )
     pop()
     return random_color
