@@ -15,6 +15,7 @@ a {
   font-size: 30px;
   text-decoration: underline;
   color: rgb(0, 0, 0);
+  /* margin-right: 10px; */
 }
 
 a:visited {
@@ -45,4 +46,5 @@ a:hover, a:focus {
   border: 2px solid black;
   border-radius: 0.3vmin;
   text-align: center;
+  align-content: space-between;
 }
