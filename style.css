@@ -5,6 +5,26 @@ html, body {
   overflow: hidden;
 }
 
+h1 {
+  font-size: 46px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-size: 30px;
+  text-decoration: underline;
+  color: rgb(69, 0, 158);
+}
+
+a:visited {
+  color: rgb(69, 0, 158);
+}
+
+a:hover, a:focus {
+  color: cyan;
+}
+
 #canvas-container, #main-container {
   position: absolute;
 }
@@ -16,11 +36,11 @@ html, body {
 }
 
 #my-box {
-  font-size: 40px;
+  font-size: 44px;
   font-family: 'Itim';
-  background: rgba(111, 139, 139, 0.945);
+  background: rgba(85, 145, 142, 0.952);
   color: white;
-  padding: 2vmin;
+  padding: 1.3vmin;
   margin: auto auto;
   border: 2px solid black;
   border-radius: 0.3vmin;

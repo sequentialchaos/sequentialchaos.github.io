@@ -123,7 +123,7 @@ class Hex {
     let random_color = color(
       int(Math.random() * 300) + 400,
       int(Math.random() * 200) + (400 - 200 + 1),
-      int(Math.random() * 50) + (700 - 50 + 1) 
+      int(Math.random() * 50) + (750 - 50 + 1) 
     )
     pop()
     return random_color
