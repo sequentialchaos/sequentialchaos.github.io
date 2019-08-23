@@ -12,17 +12,26 @@ function setup() {
     num_columns: 12,
     stroke_color: background_color
   })
+
+  num_hexes = hex_grid.num_columns * hex_grid.num_rows
+  rng_volatile_hexes = num_hexes * 0.23
+  max_volatile_hexes = num_hexes * 0.25
+
+  hex = new Hex()
 }
 
 function draw() {
   background(background_color)
   stroke(background_color)
   hex_grid.draw()
-  if (frameCount % 2 == 0) {
-    for (let i = 0; i < 2; i++) {
+  if (frameCount % 12 == 0) {
+    new_color = hex.generateRandomColor()
+    num_volatile_hexes = max_volatile_hexes - Math.random() * rng_volatile_hexes + 1
+    print(num_volatile_hexes)
+    for (let i = 0; i < num_volatile_hexes; i++) {
       random_hex_index = int(Math.random() * hex_grid.hexes.length)
       random_hex = hex_grid.hexes[random_hex_index]
-      random_hex.fill_color = random_hex.generateRandomColor()
+      random_hex.fill_color = new_color
     }
   }
 }
@@ -96,9 +105,9 @@ class Hex {
     push()
     colorMode(HSB, 1000, 1000, 1000)
     let random_color = color(
-      int(Math.random() * 300) + 400,
-      int(Math.random() * 200) + (400 - 200 + 1),
-      int(Math.random() * 300) + (850 - 300 + 1) 
+      int(Math.random() * 300) + 450,
+      int(Math.random() * 100) + (1000 - 100 + 1),
+      int(Math.random() * 250) + (900 - 250 + 1) 
     )
     pop()
     return random_color
