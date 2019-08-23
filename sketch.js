@@ -27,7 +27,6 @@ function draw() {
   if (frameCount % 12 == 0) {
     new_color = hex.generateRandomColor()
     num_volatile_hexes = max_volatile_hexes - Math.random() * rng_volatile_hexes + 1
-    print(num_volatile_hexes)
     for (let i = 0; i < num_volatile_hexes; i++) {
       random_hex_index = int(Math.random() * hex_grid.hexes.length)
       random_hex = hex_grid.hexes[random_hex_index]
