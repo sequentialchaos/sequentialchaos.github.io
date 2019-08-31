@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Itim&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Itim&display=swap");
 
-html, body {
+html,
+body {
   margin: 0;
   overflow: hidden;
 }
@@ -10,7 +11,6 @@ h1 {
   margin: 0;
   padding: 0;
 }
-
 
 a {
   font-size: 60px;
@@ -23,7 +23,8 @@ a:visited {
   color: rgb(0, 33, 59);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: white;
 }
 
@@ -31,7 +32,8 @@ i:hover {
   transform: scale(1.3);
 }
 
-#canvas-container, #main-container {
+#canvas-container,
+#main-container {
   position: absolute;
 }
 
@@ -43,7 +45,7 @@ i:hover {
 
 #my-box {
   font-size: 44px;
-  font-family: 'Itim';
+  font-family: "Itim";
   background: rgba(79, 159, 206, 0.986);
   color: white;
   border: 5px solid lightblue;
@@ -51,6 +53,10 @@ i:hover {
   padding: 4vmin;
   margin: auto auto;
   text-align: center;
+}
+
+.icon {
+  width: 60px;
 }
 
 /* smaller screens */
