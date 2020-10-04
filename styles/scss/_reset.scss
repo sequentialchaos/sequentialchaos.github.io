@@ -1,0 +1,16 @@
+@import 'variables';
+
+:root { 
+  font: 20px/1.2 "Erika Type", sans-serif; 
+  color: $primary-color;
+}
+
+body,
+body * {
+	margin:          unset;
+	box-sizing:      unset;
+	padding:         unset;
+	font-size:       unset;
+	color:           unset;
+	text-decoration: unset;
+}
