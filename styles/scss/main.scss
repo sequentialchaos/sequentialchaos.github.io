@@ -4,43 +4,20 @@
 
 html,
 body {
-	overflow: hidden;
-}
-
-h1 {
-	font-size: 1.5rem;
-}
-
-h2 {
-	font-size: 1.3rem;
-}
-
-#position {
-	font-size: 1.0rem;
-	font-weight: normal;
-	margin-left: 0.2rem;
+	background-color: darken($background-color, 60%);
 }
 
 a {
-	font-size: 1.2rem;
 	text-decoration: none;
 	color: $primary-color;
-	margin-right: 10px;
-}
-
-a:visited {
-	color: $primary-color;
-}
-
-a:hover,
-a:focus {
-	color: lighten($primary-color, 4%);
-	background-color: darken($background-color, 4%);
+	:visited {
+		color: $primary-color;
+	}
 }
 
 #container {
 	display: grid;
-	grid-template-columns: 1fr minmax(0, 720px) 1fr;
+	grid-template-columns: 5% 1fr [start] minmax(0, 8.5in) [end] 1fr 5%;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -48,14 +25,15 @@ a:focus {
 }
 
 #main-container {
-	grid-column: 2 / 3;
+	max-height: 12in;
+	grid-column: start / end;
 	display: grid;
-	grid-template-rows: 3rem 5fr 3rem;
+	grid-template-rows: 3rem minmax(0, 1fr)  3rem;
 	margin-top: 0.5rem;
 	margin-bottom: 1.0rem;
 	background-color: $background-color;
-	padding: 2rem;
-	box-shadow: 0.5rem 0.5rem 0rem 0rem darken($background-color, 4%);
+	padding: 5%;
+	box-shadow: 0.5rem 0.5rem 0rem 0rem darken($background-color, 10%);
 }
 
 #top {
@@ -65,24 +43,54 @@ a:focus {
 	font-family: "Erika Type";
 }
 
+#name {
+	font-size: 1.6rem;
+}
+
+#position {
+	font-size: 1.0rem;
+	font-weight: normal;
+	margin-left: 0.3rem;
+}
+
 #top-links {
 	display: grid;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	margin-right: 5px;
+	:hover, :focus {
+		color: lighten($primary-color, 4%);
+		background-color: darken($background-color, 4%);
+	}
+}
+
+.inline-links {
+	font-weight: 700;
+}
+
+.inline-links:hover, .inline-links:focus {
+	color: lighten($primary-color, 4%);
+	background-color: darken($background-color, 4%);
 }
 
 #middle {
+	margin: 8rem 4rem;
 	text-align: center;
-	margin: auto auto;
+}
+
+#greeting {
+	font-size: 1.2rem;
 }
 
 #bottom {
 	display: flex;
+	margin: 0 4rem;
+	justify-content: space-around;
+	grid-row: 4 / 5;
 }
 
 .rc-webring {
-	position: absolute;
-	bottom: 1rem;
-	right: 1rem;
-	transform: scale(0.6);
+	transform: scale(0.8);
 }
 
 #rc-webring {
@@ -113,19 +121,26 @@ a:focus {
 
 /* smaller screens */
 @media (max-width: 550px) {
-	h1 {
-		font-size: 1.2rem;
-	}
-	a {
-		font-size: 1rem;
+	#middle {
+		margin: 8rem 2rem;
+		text-align: center;
 	}
 }
 
-@media (max-width: 340px) {
-	h1 {
-		font-size: 1.1rem;
-	}
-	a {
-		font-size: 0.9rem;
+@media (max-width: 375px) {
+	#middle {
+		margin: 8rem 2rem;
+		text-align: center;
 	}
 }
+// @media (max-width: 340px) {
+// 	h1 {
+// 		font-size: 1.1rem;
+// 	}
+// 	a {
+// 		font-size: 0.7rem;
+// 	}
+// 	#position {
+// 		font-size: 0.6rem;
+// 	}
+// }
