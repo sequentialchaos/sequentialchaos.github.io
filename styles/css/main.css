@@ -1,0 +1,221 @@
+:root {
+  font: 20px/1.2 "Erika Type", sans-serif;
+  color: #3d3d52;
+}
+
+body,
+body * {
+  margin: unset;
+  -webkit-box-sizing: unset;
+          box-sizing: unset;
+  padding: unset;
+  font-size: unset;
+  color: unset;
+  text-decoration: unset;
+}
+
+/* smaller screens */
+@media (max-width: 550px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 340px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 280px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@font-face {
+  font-family: "Erika Type";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../../assets/fonts/erika_type/Erika Type.ttf");
+  font-display: swap;
+}
+
+html,
+body {
+  background-color: #484861;
+}
+
+a {
+  text-decoration: none;
+  color: #3d3d52;
+}
+
+a :visited {
+  color: #3d3d52;
+}
+
+#container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 1fr [start] minmax(0, 8.5in) [end] 1fr 5%;
+      grid-template-columns: 5% 1fr [start] minmax(0, 8.5in) [end] 1fr 5%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #484861;
+}
+
+#main-container {
+  max-height: 12in;
+  grid-column: start / end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 3rem minmax(0, 1fr) 3rem;
+      grid-template-rows: 3rem minmax(0, 1fr) 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.0rem;
+  background-color: #eaeaf0;
+  padding: 5%;
+  -webkit-box-shadow: 0.5rem 0.5rem 0rem 0rem #cdcdda;
+          box-shadow: 0.5rem 0.5rem 0rem 0rem #cdcdda;
+}
+
+#top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-family: "Erika Type";
+}
+
+#name {
+  font-size: 1.6rem;
+}
+
+#position {
+  font-size: 1.0rem;
+  font-weight: normal;
+  margin-left: 0.3rem;
+}
+
+#top-links {
+  display: -ms-grid;
+  display: grid;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-right: 5px;
+}
+
+#top-links :hover, #top-links :focus {
+  color: #45455e;
+  background-color: #dfdfe7;
+}
+
+.inline-links {
+  font-weight: 900;
+  background-color: #b0b0c4;
+}
+
+.inline-links:hover, .inline-links:focus {
+  color: #45455e;
+  background-color: #dfdfe7;
+}
+
+#middle {
+  margin: 8rem 4rem;
+  text-align: center;
+}
+
+#greeting {
+  font-size: 1.2rem;
+}
+
+#bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 4rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+}
+
+.rc-webring {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#rc-webring:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-animation: spin 2s;
+          animation: spin 2s;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translateX(0vw) rotate(0deg) scale(1.04);
+            transform: translateX(0vw) rotate(0deg) scale(1.04);
+  }
+  25% {
+    -webkit-transform: translateX(0.6vw) rotate(90deg) scale(1.25);
+            transform: translateX(0.6vw) rotate(90deg) scale(1.25);
+  }
+  50% {
+    -webkit-transform: translateX(0vw) rotate(180deg) scale(1.5);
+            transform: translateX(0vw) rotate(180deg) scale(1.5);
+  }
+  75% {
+    -webkit-transform: translateX(-0.6vw) rotate(270deg) scale(1.75);
+            transform: translateX(-0.6vw) rotate(270deg) scale(1.75);
+  }
+  100% {
+    -webkit-transform: translateX(0vw) rotate(360deg) scale(2);
+            transform: translateX(0vw) rotate(360deg) scale(2);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: translateX(0vw) rotate(0deg) scale(1.04);
+            transform: translateX(0vw) rotate(0deg) scale(1.04);
+  }
+  25% {
+    -webkit-transform: translateX(0.6vw) rotate(90deg) scale(1.25);
+            transform: translateX(0.6vw) rotate(90deg) scale(1.25);
+  }
+  50% {
+    -webkit-transform: translateX(0vw) rotate(180deg) scale(1.5);
+            transform: translateX(0vw) rotate(180deg) scale(1.5);
+  }
+  75% {
+    -webkit-transform: translateX(-0.6vw) rotate(270deg) scale(1.75);
+            transform: translateX(-0.6vw) rotate(270deg) scale(1.75);
+  }
+  100% {
+    -webkit-transform: translateX(0vw) rotate(360deg) scale(2);
+            transform: translateX(0vw) rotate(360deg) scale(2);
+  }
+}
+
+/* smaller screens */
+@media (max-width: 550px) {
+  #middle {
+    margin: 8rem 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  #middle {
+    margin: 8rem 2rem;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */

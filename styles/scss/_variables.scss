@@ -1,4 +1,7 @@
 $pretty-blue: hsl(198, 76%, 83%);
 $primary-color: hsl(240, 15%, 28%);
+$dark-primary-color: darken($primary-color, 5%);
 $background-color: lighten($primary-color, 65%);
+$highlight-color-1: hsl(60, 100%, 91%);
+$highlight-color-2: hsl(115, 100%, 91%);
 $rc-webring-scale: 2;
